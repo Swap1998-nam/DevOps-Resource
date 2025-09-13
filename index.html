@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DevOps Roadmap</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // Dark mode toggle
+    function toggleTheme() {
+      document.documentElement.classList.toggle('dark');
+    }
+  </script>
+</head>
+<body class="bg-gray-50 text-gray-900 font-sans dark:bg-gray-900 dark:text-gray-100">
+  <!-- Navbar -->
+  <nav class="bg-blue-700 dark:bg-blue-900 text-white shadow-md">
+    <div class="container mx-auto flex justify-between items-center py-4 px-6">
+      <h1 class="text-xl font-bold">DevOps Roadmap</h1>
+      <div>
+        <button onclick="toggleTheme()" class="bg-white text-blue-700 px-3 py-1 rounded-md font-semibold hover:bg-gray-200 dark:bg-gray-700 dark:text-yellow-300">
+          🌙 Toggle Theme
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-r from-blue-600 to-blue-400 dark:from-blue-900 dark:to-blue-700 text-white text-center py-20">
+    <h2 class="text-4xl md:text-5xl font-extrabold">Your Path to Becoming a DevOps Engineer</h2>
+    <p class="mt-4 text-lg md:text-xl">Step-by-step roadmap, resources, and guides.</p>
+    <a href="#roadmap" class="mt-6 inline-block bg-white text-blue-700 px-6 py-3 rounded-xl font-semibold shadow-lg hover:bg-gray-200">Explore Roadmap</a>
+  </section>
+
+  <!-- Roadmap Section -->
+  <section id="roadmap" class="container mx-auto px-6 py-16">
+    <h3 class="text-3xl font-bold text-center mb-10">📌 DevOps Roadmap</h3>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Card -->
+      <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 hover:scale-105 transition">
+        <h4 class="text-xl font-semibold mb-2">1. Linux & Networking</h4>
+        <p class="mb-3">Learn Linux basics, file system, SSH, and networking fundamentals.</p>
+        <a href="https://linuxjourney.com/" class="text-blue-600 dark:text-yellow-300 underline">Linux Journey</a>
+      </div>
+      <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 hover:scale-105 transition">
+        <h4 class="text-xl font-semibold mb-2">2. Git & Version Control</h4>
+        <p class="mb-3">Master Git workflows, branching, merging, and collaboration.</p>
+        <a href="https://git-scm.com/doc" class="text-blue-600 dark:text-yellow-300 underline">Git Docs</a>
+      </div>
+      <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 hover:scale-105 transition">
+        <h4 class="text-xl font-semibold mb-2">3. Scripting & Automation</h4>
+        <p class="mb-3">Shell scripting & Python for task automation.</p>
+        <a href="https://www.learnshell.org/" class="text-blue-600 dark:text-yellow-300 underline">Learn Shell</a>
+      </div>
+      <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 hover:scale-105 transition">
+        <h4 class="text-xl font-semibold mb-2">4. CI/CD Tools</h4>
+        <p class="mb-3">Learn Jenkins, GitHub Actions, and GitLab CI/CD pipelines.</p>
+        <a href="https://www.jenkins.io/doc/" class="text-blue-600 dark:text-yellow-300 underline">Jenkins Docs</a>
+      </div>
+      <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 hover:scale-105 transition">
+        <h4 class="text-xl font-semibold mb-2">5. Containers & Orchestration</h4>
+        <p class="mb-3">Docker and Kubernetes basics for containerized apps.</p>
+        <a href="https://kubernetes.io/docs/home/" class="text-blue-600 dark:text-yellow-300 underline">Kubernetes Docs</a>
+      </div>
+      <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 hover:scale-105 transition">
+        <h4 class="text-xl font-semibold mb-2">6. Cloud Platforms</h4>
+        <p class="mb-3">Get started with AWS, Azure, or GCP.</p>
+        <a href="https://aws.amazon.com/getting-started/" class="text-blue-600 dark:text-yellow-300 underline">AWS Basics</a>
+      </div>
+      <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 hover:scale-105 transition">
+        <h4 class="text-xl font-semibold mb-2">7. Infrastructure as Code</h4>
+        <p class="mb-3">Terraform & Ansible for automated infra setup.</p>
+        <a href="https://developer.hashicorp.com/terraform/tutorials" class="text-blue-600 dark:text-yellow-300 underline">Terraform</a>
+      </div>
+      <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 hover:scale-105 transition">
+        <h4 class="text-xl font-semibold mb-2">8. Monitoring & Logging</h4>
+        <p class="mb-3">Prometheus, Grafana, and ELK stack for monitoring.</p>
+        <a href="https://grafana.com/docs/" class="text-blue-600 dark:text-yellow-300 underline">Grafana Docs</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Resources Section -->
+  <section class="bg-gray-100 dark:bg-gray-800 py-16">
+    <div class="container mx-auto px-6">
+      <h3 class="text-3xl font-bold text-center mb-10">📚 Resources</h3>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <a href="https://roadmap.sh/devops" class="block bg-white dark:bg-gray-900 rounded-lg shadow-lg p-6 hover:bg-gray-50 dark:hover:bg-gray-700 transition">
+          <h4 class="text-lg font-semibold mb-2">DevOps Roadmap (roadmap.sh)</h4>
+          <p>A visual roadmap for DevOps skills & tools.</p>
+        </a>
+        <a href="https://training.play-with-docker.com/" class="block bg-white dark:bg-gray-900 rounded-lg shadow-lg p-6 hover:bg-gray-50 dark:hover:bg-gray-700 transition">
+          <h4 class="text-lg font-semibold mb-2">Play with Docker</h4>
+          <p>Hands-on interactive Docker labs.</p>
+        </a>
+        <a href="https://docs.microsoft.com/en-us/learn/" class="block bg-white dark:bg-gray-900 rounded-lg shadow-lg p-6 hover:bg-gray-50 dark:hover:bg-gray-700 transition">
+          <h4 class="text-lg font-semibold mb-2">Microsoft Learn</h4>
+          <p>Free learning paths for Azure & DevOps.</p>
+        </a>
+        <a href="https://www.udemy.com/courses/search/?q=devops" class="block bg-white dark:bg-gray-900 rounded-lg shadow-lg p-6 hover:bg-gray-50 dark:hover:bg-gray-700 transition">
+          <h4 class="text-lg font-semibold mb-2">Udemy Courses</h4>
+          <p>Affordable DevOps courses with projects.</p>
+        </a>
+        <a href="https://kubernetesbyexample.com/" class="block bg-white dark:bg-gray-900 rounded-lg shadow-lg p-6 hover:bg-gray-50 dark:hover:bg-gray-700 transition">
+          <h4 class="text-lg font-semibold mb-2">Kubernetes by Example</h4>
+          <p>Hands-on Kubernetes learning by examples.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-blue-700 dark:bg-blue-900 text-white py-6 text-center">
+    <p>&copy; 2025 DevOps Roadmap. Built with ❤️ for learners.</p>
+  </footer>
+</body>
+</html>
