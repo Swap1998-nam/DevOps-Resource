@@ -2,8 +2,8 @@ pipeline {
     agent any
 
     environment {
-        IMAGE_NAME = "my-nginx1"
-        CONTAINER_NAME = "nginx-container1"
+        IMAGE_NAME = "my-nginx"
+        CONTAINER_NAME = "nginx-container"
     }
 
     stages {
