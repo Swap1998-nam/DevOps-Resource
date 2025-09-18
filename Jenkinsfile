@@ -4,12 +4,13 @@ pipeline {
     environment {
         IMAGE_NAME = "my-nginx"
         CONTAINER_NAME = "nginx-container"
+        HOST_PORT = "9010"
+        CONTAINER_PORT = "80"
     }
 
     stages {
         stage('Checkout') {
             steps {
-                // Pull code from GitHub (your repo must have Dockerfile + index.html)
                 checkout scm
             }
         }
@@ -25,10 +26,12 @@ pipeline {
         stage('Run Container') {
             steps {
                 script {
-                    // Stop and remove old container if it exists
+                    // Stop and remove running OR stopped container with the same name
                     sh '''
-                    docker ps -q --filter "name=$CONTAINER_NAME" | grep -q . && docker stop $CONTAINER_NAME && docker rm $CONTAINER_NAME || true
-                    docker run -d --name $CONTAINER_NAME -p 9010:80 $IMAGE_NAME
+                    if [ "$(docker ps -aq -f name=$CONTAINER_NAME)" ]; then
+                        docker rm -f $CONTAINER_NAME
+                    fi
+                    docker run -d --name $CONTAINER_NAME -p $HOST_PORT:$CONTAINER_PORT $IMAGE_NAME
                     '''
                 }
             }
@@ -37,7 +40,7 @@ pipeline {
         stage('Verify') {
             steps {
                 script {
-                    sh 'curl -I http://localhost:8080 || true'
+                    sh 'curl -I http://localhost:$HOST_PORT || true'
                 }
             }
         }
@@ -49,4 +52,3 @@ pipeline {
         }
     }
 }
-
